@@ -123,7 +123,11 @@ func (c *CloudSyncImpl) RequestPublish(host string, clientID string, message mqt
 
 // RequestSubscribe is  configuration request handler
 func (c *CloudSyncImpl) RequestSubscribe(host string, clientID string, topic string) string {
+<<<<<<< HEAD
 	log.Info(logPrefix, "Subscribing the data to ", logmgr.SanitizeUserInput(host))
+=======
+	log.Info(logPrefix, "Subscribing the data to ", logmgr.SanitizeUserInput(host)) // lgtm [go/log-injection]
+>>>>>>> 3080236855fd5c2ffc0751b5745d2be3a3613ffc
 	resp := ""
 	var wg sync.WaitGroup
 	if !isCloudSyncSet {
