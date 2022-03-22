@@ -158,7 +158,11 @@ var messageHandler MQTT.MessageHandler = func(client MQTT.Client, msg MQTT.Messa
 
 //Subscribe is used to subscribe to a topic
 func (client *Client) Subscribe(topic string) error {
+<<<<<<< HEAD
 	log.Info(logPrefix, "Subscribing to ", logmgr.SanitizeUserInput(topic))
+=======
+	log.Info(logPrefix, "Subscribing to ", logmgr.SanitizeUserInput(topic)) // lgtm [go/log-injection]
+>>>>>>> 3080236855fd5c2ffc0751b5745d2be3a3613ffc
 	mqttClient := client.Client
 	for mqttClient == nil {
 		time.Sleep(time.Second * 2)
